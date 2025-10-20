@@ -86,7 +86,7 @@ def hash(
 
 
 @app.command("check-password")
-def check_password(password: str = typer.Argument(..., hide_input=True, help="Password to evaluate")) -> None:
+def check_password(password: str = typer.Option(.., prompt=True., hide_input=True, help="Password to evaluate")) -> None:
     """Assess the strength of a password using simple heuristics."""
 
     score = 0
